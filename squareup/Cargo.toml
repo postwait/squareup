@@ -36,6 +36,7 @@ serde_path_to_error = "0.1.17"
 chrono-tz = { version = "0.10.0", features = ["filter-by-regex"] }
 
 [features]
+undocumented = []
 default = ["default-tls"]
 default-tls = ["reqwest/default-tls"]
 native-tls = ["reqwest/native-tls"]

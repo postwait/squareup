@@ -78,6 +78,11 @@ pub struct CatalogItemVariation {
     /// Whether stock is counted directly on this variation (TRUE) or only on its components
     /// (FALSE).
     pub stockable: Option<bool>,
+
+    /// Undocumented unit costs.
+    #[cfg(feature = "undocumented")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub default_unit_cost: Option<Money>,
     /// The IDs of images associated with this `CatalogItemVariation` instance. These images will be
     /// shown to customers in Square Online Store.
     pub image_ids: Option<Vec<String>>,
